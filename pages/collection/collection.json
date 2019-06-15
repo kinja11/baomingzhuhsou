@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "活动收藏",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-button": "../../dist/button/index",
+    "i-card": "../../dist/card/index"
+  }
+}
