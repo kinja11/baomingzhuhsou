@@ -1,4 +1,5 @@
-// pages/join-shop/join-shop.js
+// pages/join-activity-hall/join-activity-hall.js
+const { $Toast } = require('../../dist/base/index');
 Page({
 
   /**
@@ -62,5 +63,32 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  
+  //点击创建活动绑定事件
+  handleSubmit() {
+    console.log(this.staticData);
+    if (!this.staticData.name) {
+      $Toast({
+        content: '请填写姓名',
+        icon: 'warning',
+        duration: 2
+      })
+    } else if (!this.staticData.contact == "请填写联系方式") {
+      $Toast({
+        content: '请填写联系方式',
+        icon: 'warning',
+        duration: 2
+      })
+    }
+    else {
+      $Toast({
+        content: '成功!等待审核',
+        icon: 'success',
+        duration: 2
+      })
+    }
+    return;
+    console.log(this.staticData);
   }
 })

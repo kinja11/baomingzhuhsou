@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+
+  },
 
   "pages": [
     "pages/activity_hall/index",   
@@ -35,6 +38,7 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
+  
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#0063F6",

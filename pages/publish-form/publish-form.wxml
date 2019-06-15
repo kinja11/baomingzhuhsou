@@ -1,15 +1,15 @@
 <view>
+  <view class='row'>
+    <label class='title'>活动类型</label>
+    <view class='info'><input class="in" bindinput="inputName" disabled="false" placeholder="信息登记" /></view>
+  </view>
+  
   <picker mode="date" value="{{date}}" start="2019-01-01" end="2100-01-01" bindchange="bindDateChange">
   <view class='row'>
     <label class='title'>活动日期</label>
     <view class='info'>{{date}}</view>
     </view>
   </picker>
-
-  <view class='row'>
-    <label class='title'>活动类型</label>
-    <view class='info'><input class="in" bindinput="inputName" disabled="false" placeholder="信息登记" /></view>
-  </view>
 
   <view class='row'>
     <label class='title'>标题</label>

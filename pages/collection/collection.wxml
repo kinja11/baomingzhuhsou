@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <!--显示活动内容-->
+
 <scroll-view scroll-y class='item-list' hidden='{{!mdTextHidden}}'>
   <view class='pro-item' wx:for="{{proList}}">
   <navigator url='../collection-detail/collection-detail'>

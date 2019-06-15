@@ -1,4 +1,7 @@
 <!--index.wxml-->
+<i-notice-bar icon="systemprompt" closable>
+    报名助手测试版
+</i-notice-bar>
 <!--搜索框-->
 <view class="weui-search-bar">
   <view class="weui-search-bar__form">

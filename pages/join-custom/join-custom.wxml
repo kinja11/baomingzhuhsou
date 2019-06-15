@@ -1,2 +1,27 @@
-<!--pages/join-custom/join-custom.wxml-->
-<text>pages/join-custom/join-custom.wxml</text>
+<view>
+  <view class='row'>
+    <label class='title'>活动类型</label>
+    <view class='info'><input class="in" bindinput="handleName" disabled="ture" placeholder="自定义报名" /></view>
+  </view>
+  <view class='row'>
+    <label class='title'>姓名</label>
+    <view class='info'><input class="in" bindinput="handleName" placeholder="请填写你的姓名" /></view>
+  </view>
+  <view class='row'>
+    <label class='title'>你的性别</label>
+    <view class='info'>
+      <radio-group>
+        <label>
+          <radio value="1" checked="false"/>男
+          <radio value="2" checked="false"/>女
+        </label>
+      </radio-group>
+    </view>
+  </view>
+    <view class='row'>
+    <label class='title'>联系方式</label>
+    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系方式'/></view>
+  </view>
+  <i-button bindtap='handleSubmit' type="success" shape="circle" size="large">确认报名</i-button>
+  <i-toast id="toast" />
+</view>

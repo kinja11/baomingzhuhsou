@@ -1,4 +1,5 @@
 <view>
+
   <picker mode="date" value="{{date}}" start="2019-01-01" end="2100-01-01" bindchange="bindDateChange">
   <view class='row'>
     <label class='title'>活动日期</label>
