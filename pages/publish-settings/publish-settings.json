@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "更改活动",
-  "usingComponents": {
-    "i-icon": "../../dist/icon/index",
-    "i-button": "../../dist/button/index"
-  }
-}
