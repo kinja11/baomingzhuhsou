@@ -1,23 +1,31 @@
+
+
 <view>
   <view class='row'>
     <label class='title'>姓名</label>
-    <view class='info'><input class="in" bindinput="handleName" placeholder="请填写你的姓名" /></view>
+    <view class='info' ><input class="in" placeholder="请填写你的姓名"  bindinput="inputName" /></view>
   </view>
-  <view class='row'>
-    <label class='title'>你的性别</label>
-    <view class='info'>
-      <radio-group>
-        <label>
-          <radio value="1" checked="false"/>男
-          <radio value="2" checked="false"/>女
-        </label>
-      </radio-group>
-    </view>
-  </view>
+  
     <view class='row'>
     <label class='title'>联系方式</label>
-    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系方式'/></view>
+    <view class='info'><input class="in" bindinput='inputPhoneNumber' placeholder='请输入联系方式'/></view>
   </view>
-  <i-button bindtap='handleSubmit' type="success" shape="circle" size="large">确认报名</i-button>
+ 
+
+
+  <view class='demo-box'>
+    <view class='title'>你的性别</view>
+     <radio-group bindchange='radioChange'>
+        <view class='test' wx:for='{{radioItems}}' wx:key='item{{index}}'>
+        <radio value='{{item.value}}' checked='{{item.checked}}'/>
+        {{item.name}}
+        </view>
+      </radio-group>
+    </view>
+
+ 
+  <i-button bindtap='showTopTips' type="success" shape="circle" size="large">确认报名</i-button>
+  <i-toast id="toast" />
+  <i-button bindtap='returnActivityHall' type="success" shape="circle" size="large">返回报名大厅</i-button>
   <i-toast id="toast" />
 </view>

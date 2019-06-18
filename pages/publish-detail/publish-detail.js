@@ -1,10 +1,19 @@
 // pages/publish-detail/publish-detail.js
+
+const net = require('../../utils/netutils.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    activityid: "",
+    getByIDURL: "http://127.0.0.1:8080/xcx/findByActivityId/",
+    activity: [],
+    
+    
+
+
 
   },
 
@@ -26,8 +35,39 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setData({
+      activityid: wx.getStorageSync("activityId"),
 
+    });
+
+    var that = this;
+    wx.request({
+      url: this.data.getByIDURL + this.data.activityid,
+      method: "GET",
+      data: {},
+      success: function (res) {
+        var myuser = res.data;
+        that.setData({
+          activity: myuser
+        });
+
+
+      }
+    })
   },
+
+
+
+deleteActivity:function(){
+  var that = this;
+  net.post("/xcx/deleteUserPublish/" + this.data.activityid, null,
+    wx.navigateTo({
+      url: '../publishHistory/publishHistory',
+    })
+  )
+},
+
+
 
   /**
    * 生命周期函数--监听页面隐藏

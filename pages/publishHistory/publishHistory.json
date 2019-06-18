@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "收藏的活动",
+  "navigationBarTitleText": "发起的活动",
   "usingComponents": {
     "i-input": "../../dist/input/index",
     "i-button": "../../dist/button/index",

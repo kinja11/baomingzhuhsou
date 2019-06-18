@@ -1,31 +1,33 @@
-<!--pages/publish-detail/publish-detail.wxml-->
+<!--pages/activity-details/activity-details.wxml-->
 <!--第二版content-->
 <!--顶部图片-->
 <image src='../../img/people-1031169__340.jpg' class='header-image' mode='scaleFill'></image>
 <view class='activity-msg-list'>
   <view class='act-title'>
-    <view class='header'>活动标题xxx</view>
+    <view class='header'>活动标题:{{activity.ac_name}}</view>
     <!--<image class='collection'></image>-->
   </view>
-  <view class='act-items'>收藏人数</view>
-  <view class='act-items'>活动发布时间：2019-05-21</view>
-  <view class='act-items'>主办方/举办人</view>
-  <view class='act-items'>联系方式</view>
-  <view class='act-items'>报名人数</view>
-  <view class='act-items'>活动时间</view>
+ 
+  <view class='act-items'>活动发布时间:{{activity.ac_pdate}}</view>
+  <view class='act-items'>主办方/举办人:{{activity.ac_cre}}</view>
+  <view class='act-items'>联系方式:{{activity.ac_tel}}</view>
+  <view class='act-items'>活动开始时间:{{activity.ac_sdate}}</view>
+  <view class='act-items'>活动结束时间:{{activity.ac_edate}}</view>
 </view>
 <view class='activity-msg-detail'>
   <view class='detail-title'>
     <view class='header'>活动详情</view>
   </view>
-  <view class='act-deatils'>活动描述详情xxxxxxxxxxxxxxxxxxx</view>
+  
 </view>
 <view class='map-box'>
   <!--地图接口-->地图API
 </view>
 <view class='signin-btn'>
   <navigator url='../publish-settings/publish-settings'>
-    <i-button type="success" shape="circle" size="large">更改活动</i-button>
+    <i-button type="success" shape="circle" size="large" open-type='getUserInfo' bindgetuserinfo='updateActivity'>更改活动</i-button>
   </navigator>
+    <i-button  type="success" shape="circle" size="large" bindtap='deleteActivity'>删除活动</i-button>
+ 
 </view>
 
