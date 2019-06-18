@@ -2,7 +2,11 @@
 <view class="container">
   <view class="userinfo">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" > 获取头像昵称 </button>
+=======
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+>>>>>>> parent of dcad698... 个人主页修改
 =======
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
 >>>>>>> parent of dcad698... 个人主页修改
@@ -16,8 +20,11 @@
   </view>
 </view>
 <<<<<<< HEAD
+<<<<<<< HEAD
  <view class="weui-btn-area">
             <button class="weui-btn" type="primary" bindtap="enterActivityHall">进入活动大厅</button>
 </view>
+=======
+>>>>>>> parent of dcad698... 个人主页修改
 =======
 >>>>>>> parent of dcad698... 个人主页修改
