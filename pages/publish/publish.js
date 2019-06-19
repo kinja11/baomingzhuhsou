@@ -3,24 +3,6 @@ Page({
 
 
   data: {
-<<<<<<< HEAD
-   // 插入活动数据
-   lat:"",
-   lon:"", 
-  addressname:"",
-  activityName: "",
-  activityAddress: "",
-  activityDate: "",
-  activityDetail: "",
-  activityCreatorName: "", 
-  activityPhonenumber: "",
-  activityStartDate: "",
-  activityEndDate: "",
-  activityTypeList: [ "团购拼单", "团体聚会", "信息登记", "自定义活动"],
-  address: "点击选择地址",
-  activityTitle: "请填写活动标题",
-  num: "50"
-=======
     // 插入活动数据
     lat: "",
     lon: "",
@@ -37,7 +19,6 @@ Page({
     address: "点击选择地址",
     activityTitle: "请填写活动标题",
     num: "50"
->>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
   },
 
 
@@ -47,7 +28,7 @@ Page({
     wx.chooseLocation({
       success: function (res) {
         that.setData({
-          addressname: res.name,
+          name: res.name,
           address: res.address,
           lat: res.latitude,
           lon: res.longitude
@@ -56,7 +37,6 @@ Page({
     })
     console.log(this.data.lat)
     console.log(this.data.lon)
-    console.log(this.data.addressname)
   },
 
 
@@ -72,13 +52,10 @@ Page({
     })
   },
   inputDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      date: value,
       activityDate: e.detail.value
-    });
+    })
   },
-
   inputDetail: function (e) {
     this.setData({
       activityDetail: e.detail.value
@@ -98,19 +75,15 @@ Page({
   },
 
   inputStartDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      startdate: value,
       activityStartDate: e.detail.value
-    });
+    })
   },
 
   inputEndDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      enddate: value,
       activityEndDate: e.detail.value
-    });
+    })
   },
 
   bindPickerChange(e) {
@@ -142,15 +115,9 @@ Page({
       url: 'http://127.0.0.1:8080/xcx/addActivity',
       method: 'POST',
       data: {
-<<<<<<< HEAD
-        ac_name: this.data.activityName, 
-        ac_loc: this.data.addressname,
-        ac_pdate: this.data.activityDate, 
-=======
         ac_name: this.data.activityName,
         ac_loc: this.data.activityAddress,
         ac_pdate: this.data.activityDate,
->>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
         ac_det: this.data.activityDetail,
         ac_cre: this.data.activityCreatorName,
         ac_tel: this.data.activityPhonenumber,
