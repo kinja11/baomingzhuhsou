@@ -7,6 +7,7 @@ Page({
     var that = this
     if (e.detail.userInfo) {
       console.log("success")
+      
       wx.switchTab({
        url: '../activityhall/activityhall' }) 
     } else {
