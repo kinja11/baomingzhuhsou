@@ -34,9 +34,11 @@ Page({
     })
   },
   updateDate: function (e) {
+    let value = e.detail.value;
     this.setData({
-      activityPublishDate: e.detail.value
-    })
+      date: value,
+      activityDate: e.detail.value
+    });
   }, 
   updateDetail: function (e) {
     this.setData({
@@ -56,14 +58,18 @@ Page({
   }, 
   
   updateStartDate: function (e) {
+    let value = e.detail.value;
     this.setData({
+      startdate: value,
       activityStartDate: e.detail.value
-    })
+    });
   },
   updateEndDate: function (e) {
+    let value = e.detail.value;
     this.setData({
+      enddate: value,
       activityEndDate: e.detail.value
-    })
+    });
   },
   
   

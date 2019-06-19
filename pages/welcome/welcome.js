@@ -7,7 +7,8 @@ Page({
     var that = this
     if (e.detail.userInfo) {
       console.log("success")
-      wx.redirectTo({ url: '../index/index' }) 
+      wx.switchTab({
+       url: '../activityhall/activityhall' }) 
     } else {
       //用户按了拒绝按钮
       wx.showModal({

@@ -53,10 +53,15 @@ Page({
     })
   },
   inputDate: function (e) {
+    let value = e.detail.value;
     this.setData({
+      date: value,
       activityDate: e.detail.value
-    })
+    });
+    
+   
   },
+  
   inputDetail: function (e) {
     this.setData({
       activityDetail: e.detail.value
@@ -76,15 +81,19 @@ Page({
   },
 
   inputStartDate: function (e) {
+    let value = e.detail.value;
     this.setData({
+      startdate: value,
       activityStartDate: e.detail.value
-    })
+    });
   },
   
   inputEndDate: function (e) {
+    let value = e.detail.value;
     this.setData({
+      enddate: value,
       activityEndDate: e.detail.value
-    })
+    });
   }, 
  
   bindPickerChange(e) {

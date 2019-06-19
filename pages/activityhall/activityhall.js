@@ -25,9 +25,9 @@ Page({
     console.log(e)
     activityName = e.detail.value
   },
-  
+
   getIndex(e) {
-   var id = e.currentTarget.dataset.activityid
+    var id = e.currentTarget.dataset.activityid
     wx.setStorageSync("activityId", id);
   },
 

@@ -4,19 +4,14 @@
     <label class='title'>活动类型</label>
     <view class='info'>{{activityTypeList[index]}}</view>
     </view>
-  </picker>
   
-  <picker mode="date" value="{{date}}" start="2019-01-01" end="2100-01-01" bindchange="inputDate">
+  </picker>
   <view class='row'>
     <label class='title'>活动日期</label>
-    <view class='info'>{{date}}</view>
-    </view>
+  <picker mode="date"  bindchange="inputDate">
+    <view>当前选择：{{date}}</view>
   </picker>
-
-  <view class='row'>
-    <label class='title'>日期</label>
-    <view class='info'><input class="in" bindinput='inputDate' placeholder='请输入活动日期'/></view>
-  </view>
+</view>
 
   <view class='row'>
     <label class='title'>标题</label>
@@ -45,13 +40,19 @@
     <label class='title'>联系方式</label>
     <view class='info'><input class="in" bindinput='inputCreatorPhone' placeholder='请输入联系方式'/></view></view>
 
-    <view class='row'>
+     <view class='row'>
     <label class='title'>开始日期</label>
-    <view class='info'><input class="in" bindinput='inputStartDate' placeholder='请输入开始日期'/></view></view>
+  <picker mode="date"  bindchange="inputStartDate">
+    <view>当前选择：{{startdate}}</view>
+  </picker>
+</view>
 
-    <view class='row'>
+     <view class='row'>
     <label class='title'>结束日期</label>
-    <view class='info'><input class="in" bindinput='inputEndDate' placeholder='请输入结束日期'/></view></view>
+  <picker mode="date"  bindchange="inputEndDate">
+    <view>当前选择：{{enddate}}</view>
+  </picker>
+</view>
 
 
   

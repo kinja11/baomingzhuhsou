@@ -8,27 +8,17 @@
     <label class='title'>活动地址</label>
     <view class='info' bindinput='updateAddress' value="{{activity.ac_loc}}">{{address}}</view>
   </view>
-   <view class='row'>
+
+  
+  <view class='row'>
     <label class='title'>活动日期</label>
-    <view class='info' bindinput='updatePublishDate' value="{{activity.ac_pdate}}">{{address}}</view>
-  </view>
-  <view class='row'>
-    <label class='title'>参与人数</label>
-    <view class='info'>
-      <radio-group>
-        <label>
-          <radio value="1" checked="false"/>小于10人
-          <radio value="2" checked="false"/>10-100人
-          <radio value="3" checked="false" class='checkbox1'/>100-1000人
-          <radio value="3" checked="false" class='checkbox1'/>1000人以上
-        </label>
-      </radio-group>
-    </view>
-  </view>
-  <view class='row'>
-    <label class='title'>日期</label>
-    <view class='info'><input class="in" bindinput='updateDate' value="{{activity.ac_pdate}}" placeholder='请输入活动日期'/></view>
-  </view>
+  <picker mode="date"  bindchange="updateDate" value="{{activity.ac_pdate}}" >
+    <view>当前选择：{{date}}</view>
+  </picker>
+</view>
+
+
+ 
   <view class='row'>
     <label class='title'>活动内容</label>
     <view class='info'><input class="in" bindinput='updateDetail' value="{{activity.ac_det}}" placeholder='请输入活动相关内容说明'/></view>
@@ -42,15 +32,22 @@
     <view class='info'><input class="in" bindinput='updatePhoneNumber' value="{{activity.ac_tel}}" placeholder='请输入联系方式'/></view>
   </view>
 
+  
   <view class='row'>
     <label class='title'>开始时间</label>
-    <view class='info'><input class="in" bindinput='updateStartDate' value="{{activity.ac_sdate}}"  placeholder='请输入活动开始时间'/></view>
-  </view>
+  <picker mode="date"  bindchange="updateStartDate" value="{{activity.ac_sdate}}" >
+    <view>当前选择：{{startdate}}</view>
+  </picker>
+</view>
 
+  
   <view class='row'>
     <label class='title'>结束时间</label>
-    <view class='info'><input class="in" bindinput='updateEndDate' value="{{activity.ac_edate}}" placeholder='请输入活动结束时间'/></view>
-  </view>
+  <picker mode="date"  bindchange="updateEndDate" value="{{activity.ac_edate}}" >
+    <view>当前选择：{{enddate}}</view>
+  </picker>
+</view>
+
    <i-button  type="success" shape="circle" size="large" bindtap='updateActivity'>更改活动</i-button>
 
 </view>

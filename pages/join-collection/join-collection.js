@@ -14,6 +14,13 @@ Page({
     myuser: [],
     activityName: "",
     activityDate: "",
+
+    radioItems: [
+      { name: '男', value: '男' },
+      { name: '女', value: '女', },
+    ]
+
+
   },
   inputName: function (e) {
 
@@ -24,6 +31,15 @@ Page({
       joinerName: e.detail.value
     })
   },
+
+  //输入性别
+  radioChange: function (e) {
+    this.setData({
+      joinerSex: e.detail.value
+    })
+
+  },
+
 
   inputPhoneNumber: function (e) {
     this.setData({
@@ -45,6 +61,7 @@ Page({
         ac_pdate: this.data.activityDate,
         openid: this.data.openid,
         realname: this.data.joinerName,
+        joinersex: this.data.joinerSex,
         joinerphone: this.data.joinerPhoneNumber
       },
       success: function (res) {
@@ -59,7 +76,11 @@ Page({
 
   },
 
-
+  returnMy: function () {
+    wx.switchTab({
+      url: '../my/my',
+    })
+  }, 
 
 
  

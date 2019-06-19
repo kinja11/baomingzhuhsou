@@ -69,7 +69,7 @@ radioChange:function(e){
         console.log(i);
         wx.showToast({
           title: '报名成功！',
-          duration: 5000
+          duration: 2000
 })
        
       },

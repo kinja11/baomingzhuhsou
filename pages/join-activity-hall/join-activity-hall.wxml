@@ -26,6 +26,6 @@
  
   <i-button bindtap='showTopTips' type="success" shape="circle" size="large">确认报名</i-button>
   <i-toast id="toast" />
-  <i-button bindtap='returnActivityHall' type="success" shape="circle" size="large">返回报名大厅</i-button>
+  <i-button bindtap='returnActivityHall' type="success" shape="circle" size="large">返回活动大厅</i-button>
   <i-toast id="toast" />
 </view>

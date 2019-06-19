@@ -11,16 +11,18 @@
   <view class='act-items'>活动发布时间:{{activity.ac_pdate}}</view>
   <view class='act-items'>主办方/举办人:{{activity.ac_cre}}</view>
   <view class='act-items'>联系方式:{{activity.ac_tel}}</view>
-  <view class='act-items'>报名人数:{{activity.ac_num}}</view>
   <view class='act-items'>活动开始时间:{{activity.ac_sdate}}</view>
   <view class='act-items'>活动结束时间:{{activity.ac_edate}}</view>
 </view>
+
 <view class='activity-msg-detail'>
   <view class='detail-title'>
     <view class='header'>活动详情</view>
   </view>
   <view class='act-deatils'>{{activity.ac_det}}</view>
 </view>
+
+
 <view>
   <view class='detail-title'>
     <view class='header'>活动位置</view>
@@ -32,7 +34,8 @@
 
 <view class='signin-btn'>
   <navigator url='../join-activity-hall/join-activity-hall'>
-    <i-button type="success" shape="circle" size="large" open-type='getUserInfo' bindgetuserinfo='abde' data-activityname="{{activity.ac_name}}" data-activitypublishdate="{{activity.ac_pdate}}" >确认报名</i-button></navigator>
+    <i-button type="success" shape="circle" size="large"  bindtap='abde' open-type='getUserInfo' bindgetuserinfo='cdef'
+    data-activityname="{{activity.ac_name}}" data-activitypublishdate="{{activity.ac_pdate}}" >确认报名</i-button></navigator>
     <i-button  type="success" shape="circle" size="large" bindtap='handleSubmit'>收藏活动</i-button>
  
 </view>

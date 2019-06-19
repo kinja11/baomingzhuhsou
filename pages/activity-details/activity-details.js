@@ -18,12 +18,7 @@ Page({
 
   },
 
-  abde: function (res) {
-    if (res.detail.userInfo) {
-      this.data.myInfo = res.detail.userInfo;
-    }
-    wx.setStorageSync("info", this.data.myInfo);  
-  },
+ 
   
   openMap: function () {
     wx.getLocation({
@@ -41,14 +36,26 @@ Page({
 
   //事件处理函数
   abde(e) {
+    
+
+
+
     var activityname = e.currentTarget.dataset.activityname
     wx.setStorageSync("activityName", activityname);
-    var activitypublishdate = e.currentTarget.dataset.activitypublishdate
+   
+    
+    var activitypublishdate =      e.currentTarget.dataset.activitypublishdate
     wx.setStorageSync("activityPublishDate", activitypublishdate);
 
 
   },
 
+ cdef: function (res) {
+    if (res.detail.userInfo) {
+      this.data.myInfo = res.detail.userInfo;
+    }
+    wx.setStorageSync("info", this.data.myInfo);
+  },
 
 
   /**

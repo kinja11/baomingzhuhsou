@@ -82,7 +82,7 @@ Page({
               console.log(f)
             }
           })
-
+          
           //net.wxLogin(e.openid,)
         })
       }
