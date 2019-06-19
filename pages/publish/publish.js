@@ -1,9 +1,9 @@
-
 var activityType = ""
 Page({
 
 
   data: {
+<<<<<<< HEAD
    // 插入活动数据
    lat:"",
    lon:"", 
@@ -20,8 +20,26 @@ Page({
   address: "点击选择地址",
   activityTitle: "请填写活动标题",
   num: "50"
+=======
+    // 插入活动数据
+    lat: "",
+    lon: "",
+
+    activityName: "",
+    activityAddress: "",
+    activityDate: "",
+    activityDetail: "",
+    activityCreatorName: "",
+    activityPhonenumber: "",
+    activityStartDate: "",
+    activityEndDate: "",
+    activityTypeList: ["团购拼单", "团体聚会", "信息登记", "自定义活动"],
+    address: "点击选择地址",
+    activityTitle: "请填写活动标题",
+    num: "50"
+>>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
   },
- 
+
 
   //地址绑定事件、选择地址
   chooseLocation: function () {
@@ -40,9 +58,9 @@ Page({
     console.log(this.data.lon)
     console.log(this.data.addressname)
   },
- 
-  
-//获取输入的活动信息
+
+
+  //获取输入的活动信息
   inputName: function (e) {
     this.setData({
       activityName: e.detail.value
@@ -59,10 +77,8 @@ Page({
       date: value,
       activityDate: e.detail.value
     });
-    
-   
   },
-  
+
   inputDetail: function (e) {
     this.setData({
       activityDetail: e.detail.value
@@ -88,15 +104,15 @@ Page({
       activityStartDate: e.detail.value
     });
   },
-  
+
   inputEndDate: function (e) {
     let value = e.detail.value;
     this.setData({
       enddate: value,
       activityEndDate: e.detail.value
     });
-  }, 
- 
+  },
+
   bindPickerChange(e) {
     console.log(e)
     var index = e.detail.value
@@ -104,39 +120,45 @@ Page({
     this.setData({
       index: index
     })
-  
+
   },
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   showTopTips: function () {
-    console.log(this.data.activityName + this.data.activityAddress + this.data.activityDate + this.data.activityDetail + this.data.activityCreatorName+this.data.activityPhonenumber)
+    console.log(this.data.activityName + this.data.activityAddress + this.data.activityDate + this.data.activityDetail + this.data.activityCreatorName + this.data.activityPhonenumber)
     wx.request({
       url: 'http://127.0.0.1:8080/xcx/addActivity',
       method: 'POST',
       data: {
+<<<<<<< HEAD
         ac_name: this.data.activityName, 
         ac_loc: this.data.addressname,
         ac_pdate: this.data.activityDate, 
+=======
+        ac_name: this.data.activityName,
+        ac_loc: this.data.activityAddress,
+        ac_pdate: this.data.activityDate,
+>>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
         ac_det: this.data.activityDetail,
         ac_cre: this.data.activityCreatorName,
         ac_tel: this.data.activityPhonenumber,
         ac_sdate: this.data.activityStartDate,
         ac_edate: this.data.activityEndDate,
         ac_type: activityType,
-        openid:this.data.openid,
-        longitude:this.data.lon,
+        openid: this.data.openid,
+        longitude: this.data.lon,
         latitude: this.data.lat
       },
       success: function (res) {
@@ -152,33 +174,33 @@ Page({
 
     })
   },
-  
-  
-  
-  
+
+
+
+
   onShow: function () {
     this.setData({
       openid: wx.getStorageSync("OpenId"),
 
     });
   },
-  
-  
-  
-  
-  
-  
-  
-  onLoad: function() {
-   
+
+
+
+
+
+
+
+  onLoad: function () {
+
   },
 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
   //转发分享活动
   onShareAppMessage(res) {
     if (res.from === 'button') {

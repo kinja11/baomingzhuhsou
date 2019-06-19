@@ -6,6 +6,8 @@
 
 }
 
+.center{text-align: center;}
+
 .submit-button{
   margin: 10px 8px 0 8px;
   background: #3498DB;

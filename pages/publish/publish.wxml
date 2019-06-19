@@ -1,64 +1,73 @@
-<view>
-  <view class='row'>
-    <label class='title'>活动类型</label>
-    <view class='info'>活动聚会</view>
-  </view>
 
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{activityTypeList}}">
-  <view class='row'>
-    <label class='title'>活动类型</label>
-    <view class='info'>{{activityTypeList[index]}}</view>
-    </view>
-  
-  </picker>
-  <view class='row'>
-    <label class='title'>活动日期</label>
-  <picker mode="date"  bindchange="inputDate" style="windows">
-    <view>{{date}}</view>
-  </picker>
+<view class="weui-cells__title">基本信息</view> 
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动类型</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" confirm-type="next" disabled="ture" placeholder="活动聚会"/>
+  </view>
 </view>
 
-     <view class='row'>
-    <label class='title'>开始时间</label>
-  <picker mode="time"  bindchange="inputStartDate">
-    <view>当前选择：{{startdate}}</view>
-  </picker>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动标题</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" confirm-type="next" bindinput="inputName" placeholder="请输入活动标题"/>
+  </view>
+ </view>
+
+ <view class="weui-cell weui-cell_input">
+     <view class="weui-cell__hd">
+        <view class="weui-label">活动日期</view>
+      </view>
+      <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="2019-06-01" end="2099-09-01" bindchange="inputDate">
+          <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
 </view>
 
-     <view class='row'>
-    <label class='title'>结束时间</label>
-  <picker mode="time"  bindchange="inputEndDate">
-    <view>当前选择：{{enddate}}</view>
-  </picker>
+<view class="weui-cells__title">详细信息</view> 
+<view class="weui-cells weui-cells_after-title">
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动地址</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" bindtap='chooseLocation' placeholder="{{address}}"/>
+  </view>
 </view>
 
-  <view class='row'>
-    <label class='title'>标题</label>
-    <view class='info'><input class="in" bindinput="inputName" placeholder="请填写活动标题" /></view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动联系人</view>
   </view>
-
-  <view class='row'>
-    <label class='title'>活动地址</label>
-    <view class='info' bindtap='chooseLocation'>{{address}}</view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" confirm-type="next" bindinput='inputCreatorName' placeholder="请输入联系人姓名"/>
   </view>
-
-  
-
-
-  <view class='row'>
-    <label class='title'>活动内容</label>
-    <view class='info'><input class="in" bindinput="inputDetail" placeholder='请输入活动相关内容说明'/></view>
-  </view>
-
-  <view class='row'>
-    <label class='title'>联系人</label>
-    <view class='info'><input class="in" bindinput='inputCreatorName' placeholder='请输入联系人姓名'/></view>
-    </view>
-
-    <view class='row'>
-    <label class='title'>联系方式</label>
-    <view class='info'><input class="in" bindinput='inputCreatorPhone' type="number" placeholder='请输入联系方式'/></view></view>  
-
-   <i-button type="success" shape="circle" size="large" bindtap="showTopTips">创建活动</i-button>
-
 </view>
+
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">联系方式</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" type="number" bindinput='inputCreatorPhone' maxlength="11" confirm-type="next" placeholder="请输入联系人手机号"/>
+  </view>
+ </view>
+</view>
+
+<view class="weui-cells__title">补充信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" bindinput="inputDetail" placeholder="请输入活动详细信息（可选）" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+<i-button type="success" shape="circle" size="small" bindtap="showTopTips" >发起活动</i-button>
