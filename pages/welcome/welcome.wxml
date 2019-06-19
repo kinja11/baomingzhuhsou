@@ -5,5 +5,4 @@
     <button class='bottom'  open-type="getUserInfo" type="primary" bindgetuserinfo="bindGetUserInfo" >
       <span>微信登录</span>
     </button>
-</view>
-<view wx:else style="title">请升级微信版本</view>
+    </view>

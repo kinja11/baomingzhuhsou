@@ -19,7 +19,7 @@
   font-size: 24px;
   text-align: center;
   margin: 20rpx  0 40rpx 0;
-  color:#F74159;
+  color: #2A2E43;
   letter-spacing: 3rpx;
 }
 .tip{
@@ -35,5 +35,5 @@
   margin: auto;
   width:70%;
   font-size: 35rpx;
-  background: linear-gradient(to right, #F74159 , #F97968);
+  color: #2D8CF0 ;
 }
