@@ -12,7 +12,7 @@
     </view>
     <view class="address-box">
         <view class="address-manage">
-          <navigator url="/pages/publish_history/publish_history">
+          <navigator url="/pages/publishHistory/publishHistory">
             <image src='/resources/create.png' class='icon'></image>我发起的活动        </navigator>
         </view>
         
@@ -21,7 +21,7 @@
         
         <view class="address-manage">
             
-            <navigator url="/pages/join-history/join-history">
+            <navigator url="/pages/joinHistory/joinHistory">
             <image src='/resources/join.png' class='icon'></image>
             我参与的活动</navigator>
         </view>

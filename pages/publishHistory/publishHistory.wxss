@@ -1,0 +1,24 @@
+/**index.wxss**/
+
+/**活动信息列表**/
+/**活动信息列表**/
+.item-list{
+  
+}
+.pro-item{
+  overflow: hidden;
+  padding: 5rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  background-color: #3ACCE1;
+}
+.pro-title{
+  color: #ffffff;
+  font-size: 34rpx;
+  line-height: 1;
+}
+.pro-desc{
+  font-size: 28rpx;
+  color: #ffffff;
+  line-height: 1.2;
+}

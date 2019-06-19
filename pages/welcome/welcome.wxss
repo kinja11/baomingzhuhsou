@@ -1,0 +1,39 @@
+.welcome{
+  position: fixed;
+  display:inline-block;
+  text-align: center;
+  padding:5% 0; 
+  height: 100%;
+  width: 100%; 
+  font-size: 16px;
+}
+.header {
+  margin: 110rpx 0 20rpx 0;
+}
+.header image {
+  border-radius: 90rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+.title{
+  font-size: 24px;
+  text-align: center;
+  margin: 20rpx  0 40rpx 0;
+  color:#F74159;
+  letter-spacing: 3rpx;
+}
+.tip{
+  margin-top:20rpx;
+  height: 500rpx;
+  font-size: 26rpx;
+  font-family: 'FangSong';
+  color:#333333;
+  letter-spacing:3rpx;
+}
+.bottom {
+  border-radius: 80rpx;
+  margin: auto;
+  width:70%;
+  font-size: 35rpx;
+  background: linear-gradient(to right, #F74159 , #F97968);
+}

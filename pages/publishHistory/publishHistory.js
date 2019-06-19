@@ -5,35 +5,35 @@ const app = getApp()
 
 Page({
   data: {
-    
+
 
     activity: [],
-   
-   
+
+
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-   
+
 
     mdTextHidden: true,
-    select:false,
+    select: false,
   },
   //事件处理函数
   getIndex(e) {
     var id = e.currentTarget.dataset.activityid
     wx.setStorageSync("activityId", id);
   },
-  
- 
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   onShow: function () {
-   
-  /**获取OpenID */
+
+    /**获取OpenID */
     this.setData({
       openid: wx.getStorageSync("OpenId"),
 
@@ -43,18 +43,18 @@ Page({
 
 
     var that = this;
-    net.get( "/xcx/findActivityByOpenId", null, 
-      
+    net.get("/xcx/findUserPublishByOpenId", null,
+
       function (res) {
         var myuser = res;
-        
+
         that.setData({
           activity: myuser
         });
 
- 
+
       }
-  )
+    )
   },
 
 
@@ -62,9 +62,9 @@ Page({
  * 生命周期函数--监听页面加载
  */
   onLoad: function () {
-    
+
   },
-  
+
 })
 
 

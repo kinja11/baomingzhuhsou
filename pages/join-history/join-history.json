@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "我参与的",
-  "usingComponents": {
-    "i-input": "../../dist/input/index",
-    "i-button": "../../dist/button/index",
-    "i-card": "../../dist/card/index"
-  }
-}

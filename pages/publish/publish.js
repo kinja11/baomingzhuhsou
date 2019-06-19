@@ -2,11 +2,11 @@
 var activityType = ""
 Page({
 
-  
 
   data: {
    // 插入活动数据
-    
+   lat:"",
+   lon:"", 
 
   activityName: "",
   activityAddress: "",
@@ -14,50 +14,37 @@ Page({
   activityDetail: "",
   activityCreatorName: "", 
   activityPhonenumber: "",
-  activityType: "",
+  activityStartDate: "",
+  activityEndDate: "",
   activityTypeList: [ "团购拼单", "团体聚会", "信息登记", "自定义活动"],
   address: "点击选择地址",
   activityTitle: "请填写活动标题",
   num: "50"
-  
   },
  
 
   //地址绑定事件、选择地址
-  handleAddressClick() {
+  chooseLocation: function () {
+    var that = this;
     wx.chooseLocation({
-      success: this.handleChooseLocationSucc.bind(this)
+      success: function (res) {
+        that.setData({
+          name: res.name,
+          address: res.address,
+          lat: res.latitude,
+          lon: res.longitude
+        })
+      }
     })
+    console.log(this.data.lat)
+    console.log(this.data.lon)
   },
-  //地址绑定事件
-  handleChooseLocationSucc(res) {
-   // console.log(address)
-   //console.log(res)
-    if (!res.address){
-      this.setData({
-        address: "点击选择地址"
-      })
-      this.handleAddressClick;
-    }
-    else {
-      this.setData({
-        address: res.name
-      });
-      Object.assign(this.staticData, {
-        latitude: res.latitude,
-        longitude: res.longitude
-      })
-    }
-  },
+ 
+  
 //获取输入的活动信息
   inputName: function (e) {
     this.setData({
       activityName: e.detail.value
-    })
-  },
-  inputType: function (e) {
-    this.setData({
-      activityType: e.detail.value
     })
   },
   inputAddress: function (e) {
@@ -88,6 +75,17 @@ Page({
     })
   },
 
+  inputStartDate: function (e) {
+    this.setData({
+      activityStartDate: e.detail.value
+    })
+  },
+  
+  inputEndDate: function (e) {
+    this.setData({
+      activityEndDate: e.detail.value
+    })
+  }, 
  
   bindPickerChange(e) {
     console.log(e)
@@ -98,7 +96,20 @@ Page({
     })
   
   },
-
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   showTopTips: function () {
     console.log(this.data.activityName + this.data.activityAddress + this.data.activityDate + this.data.activityDetail + this.data.activityCreatorName+this.data.activityPhonenumber)
     wx.request({
@@ -108,12 +119,15 @@ Page({
         ac_name: this.data.activityName, 
         ac_loc: this.data.activityAddress,
         ac_pdate: this.data.activityDate, 
-        ac_del: this.data.activityDetail,
+        ac_det: this.data.activityDetail,
         ac_cre: this.data.activityCreatorName,
         ac_tel: this.data.activityPhonenumber,
         ac_sdate: this.data.activityStartDate,
         ac_edate: this.data.activityEndDate,
-        ac_type: activityType
+        ac_type: activityType,
+        openid:this.data.openid,
+        longitude:this.data.lon,
+        latitude: this.data.lat
       },
       success: function (res) {
         var i = res.data;
@@ -132,7 +146,12 @@ Page({
   
   
   
-  
+  onShow: function () {
+    this.setData({
+      openid: wx.getStorageSync("OpenId"),
+
+    });
+  },
   
   
   
@@ -185,11 +204,6 @@ Page({
 
   },
 
-  bindDateChange: function (e) {
-    this.setData({
-      date: e.detail.value
-    })
-  },
 
   //人数绑定事件  绑定失败 延后
   handleNum(e) {

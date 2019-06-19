@@ -2,11 +2,15 @@
 <view>
   <view class='row'>
     <label class='title'>标题</label>
-    <view class='info'><input class="in" bindinput="handleTitle" placeholder="请填写活动标题" /></view>
+    <view class='info'><input class="in" bindinput='updateName' value="{{activity.ac_name}}"placeholder="请填写活动标题" /></view>
   </view>
   <view class='row'>
     <label class='title'>活动地址</label>
-    <view class='info' bindtap='handleAddressClick'>{{address}}</view>
+    <view class='info' bindinput='updateAddress' value="{{activity.ac_loc}}">{{address}}</view>
+  </view>
+   <view class='row'>
+    <label class='title'>活动日期</label>
+    <view class='info' bindinput='updatePublishDate' value="{{activity.ac_pdate}}">{{address}}</view>
   </view>
   <view class='row'>
     <label class='title'>参与人数</label>
@@ -23,20 +27,30 @@
   </view>
   <view class='row'>
     <label class='title'>日期</label>
-    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入活动日期'/></view>
+    <view class='info'><input class="in" bindinput='updateDate' value="{{activity.ac_pdate}}" placeholder='请输入活动日期'/></view>
   </view>
   <view class='row'>
     <label class='title'>活动内容</label>
-    <view class='info'><input class="in" bindinput="handleContent" placeholder='请输入活动相关内容说明'/></view>
+    <view class='info'><input class="in" bindinput='updateDetail' value="{{activity.ac_det}}" placeholder='请输入活动相关内容说明'/></view>
   </view>
   <view class='row'>
     <label class='title'>联系人</label>
-    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系人姓名'/></view>
+    <view class='info'><input class="in" bindinput='updateCreator' value="{{activity.ac_cre}}" placeholder='请输入联系人姓名'/></view>
     </view>
     <view class='row'>
     <label class='title'>联系方式</label>
-    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系方式'/></view>
+    <view class='info'><input class="in" bindinput='updatePhoneNumber' value="{{activity.ac_tel}}" placeholder='请输入联系方式'/></view>
   </view>
-   <i-button bind:click="handleClick" type="success" shape="circle" size="large" bindtap='handleSubmit'>更改活动</i-button>
+
+  <view class='row'>
+    <label class='title'>开始时间</label>
+    <view class='info'><input class="in" bindinput='updateStartDate' value="{{activity.ac_sdate}}"  placeholder='请输入活动开始时间'/></view>
+  </view>
+
+  <view class='row'>
+    <label class='title'>结束时间</label>
+    <view class='info'><input class="in" bindinput='updateEndDate' value="{{activity.ac_edate}}" placeholder='请输入活动结束时间'/></view>
+  </view>
+   <i-button  type="success" shape="circle" size="large" bindtap='updateActivity'>更改活动</i-button>
 
 </view>

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "发起的活动",
-  "usingComponents": {
-    "i-card": "../../dist/card/index"
-  }
-}

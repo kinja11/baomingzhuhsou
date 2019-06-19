@@ -43,7 +43,7 @@ Page({
 
 
     var that = this;
-    net.get( "/xcx/findActivityByOpenId", null, 
+    net.get( "/xcx/findUserJoinByOpenId", null, 
       
       function (res) {
         var myuser = res;

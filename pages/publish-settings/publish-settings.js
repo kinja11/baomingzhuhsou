@@ -1,34 +1,79 @@
 // pages/publish-settings/publish-settings.js
+const net = require('../../utils/netutils.js')
+var activityName=""
+var activityAddress=""
+var activityPublishDate=""
+var activityDetail=""
+var activityCreator=""
+var activityCreatorPhoneNumber=""
+var activityStartDate=""
+var activityEndDate=""
+
+
+
+
 Page({
 
 
   data: {
-    items: [
-      { name: "name1", value: "类型1" },
-      { name: "name2", value: "类型2" },
-      { name: "name3", value: "类型3" },
-      { name: "name4", value: "类型4" },
-      { name: "name5", value: "类型5" },
-      { name: "name6", value: "类型6" },
-    ],
-    address: "点击选择地址",
-    activityTitle: "请填写活动标题",
-    num: "50"
+    activityid: "",
+    getByIDURL: "http://127.0.0.1:8080/xcx/findByActivityId/",
+    activity: [],
+    postByupdateIDURL: "http://127.0.0.1:8080/xcx/updateUserPublish/",
   },
 
-  //staticData用于存放和后端进行交互的活动的信息，包括活动标题，内容，类型，联系方式等
-  staticData: {
-    title: "",
-    latitude: "",
-    longitude: "",
-    data: "",
-    detail: "",
-    creator: "",
-    phonenum: "",
-    peoplenum: "",
-
+  updateName: function (e) {
+    this.setData({
+      activityName: e.detail.value
+    })
   },
 
+  updateAddress: function (e) {
+    this.setData({
+      activityAddress: e.detail.value
+    })
+  },
+  updateDate: function (e) {
+    this.setData({
+      activityPublishDate: e.detail.value
+    })
+  }, 
+  updateDetail: function (e) {
+    this.setData({
+      activityDetail: e.detail.value
+    })
+  }, 
+ 
+  updateCreator: function (e) {
+    this.setData({
+      activityCreator: e.detail.value
+    })
+  },
+  updatePhoneNumber: function (e) {
+    this.setData({
+      activityCreatorPhoneNumber: e.detail.value
+    })
+  }, 
+  
+  updateStartDate: function (e) {
+    this.setData({
+      activityStartDate: e.detail.value
+    })
+  },
+  updateEndDate: function (e) {
+    this.setData({
+      activityEndDate: e.detail.value
+    })
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
   //地址绑定事件、选择地址
   handleAddressClick() {
     wx.chooseLocation({
@@ -57,12 +102,66 @@ Page({
   },
 
   onLoad: function () {
-    /*this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })*/
   },
+
+
+  /**
+    * 生命周期函数--监听页面显示
+    */
+  onShow: function () {
+    this.setData({
+      activityid: wx.getStorageSync("activityId"),
+
+    });
+
+    var that = this;
+    wx.request({
+      url: this.data.getByIDURL + this.data.activityid,
+      method: "GET",
+      data: {},
+      success: function (res) {
+        var myuser = res.data;
+        that.setData({
+          activity: myuser
+        });
+
+
+      }
+    })
+  },
+
+
+
+
+
+
+  updateActivity: function () {
+    var that = this;
+    net.post("/xcx/updateUserPublish/" + this.data.activityid, {
+      ac_name:this.data.activityName,
+      ac_pdate:this.data.activityPublishDate,
+      ac_del:this.data.activityDetail,
+      ac_cre:this.data.activityCreator,
+      ac_tel:this.data.activityCreatorPhoneNumber,
+      ac_sdate:this.data.activityStartDate,
+      ac_edate:this.data.activityEndDate
+
+    },
+      wx.navigateTo({
+        url: '../publishHistory/publishHistory',
+      })
+    )
+  },
+
+
+
+
+
+
+
+
+
+
 
   //转发分享活动
   onShareAppMessage(res) {

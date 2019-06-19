@@ -1,19 +1,19 @@
 <!--pages/publish-hall/publish-hall.wxml-->
 <view class='grid'>
     <view class='itemgrids'>
-        <navigator url='../publish-party/publish-party' class='itemgrid' hovor-class='itemgrid_active'>
+        <navigator url='../publish/publish' class='itemgrid' hovor-class='itemgrid_active'>
             <image class='itemgrid_icon' src='../../resources/party.png'></image>
             <view class='itemgrid_label'>团体聚会</view>
         </navigator>
-        <navigator url='../publish-shop/publish-shop' class='itemgrid' hovor-class='itemgrid_active'>
+        <navigator url='../publish/publish' class='itemgrid' hovor-class='itemgrid_active'>
             <image class='itemgrid_icon' src='../../resources/shop.png'></image>
             <view class='itemgrid_label'>团购拼单</view>
         </navigator>
-        <navigator url='../publish-form/publish-form' class='itemgrid' hovor-class='itemgrid_active'>
+        <navigator url='../publish/publish' class='itemgrid' hovor-class='itemgrid_active'>
             <image class='itemgrid_icon' src='../../resources/form.png'></image>
             <view class='itemgrid_label'>信息登记</view>
         </navigator>
-        <navigator url='../publish-custom/publish-custom' class='itemgrid' hovor-class='itemgrid_active'>
+        <navigator url='../publish/publish' class='itemgrid' hovor-class='itemgrid_active'>
             <image class='itemgrid_icon' src='../../resources/custom.png'></image>
             <view class='itemgrid_label'>自定义活动</view>
         </navigator>
