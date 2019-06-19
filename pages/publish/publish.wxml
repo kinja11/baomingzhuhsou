@@ -42,11 +42,11 @@
 
 <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">开始时间</view>
+                    <view class="weui-label">结束时间</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <picker mode="time" value="{{inputEndDate}}" start="00:00" end="24:00" bindchange="inputEndDate">
-                        <view class="weui-input">{{inputEndDate}}</view>
+                    <picker mode="time" value="{{activityEndDate}}" start="00:00" end="24:00" bindchange="inputEndDate">
+                        <view class="weui-input">{{activityEndDate}}</view>
                     </picker>
                 </view>
             </view>
