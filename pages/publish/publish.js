@@ -3,7 +3,6 @@ Page({
 
 
   data: {
-
     // 插入活动数据
     lat: "",
     lon: "",
@@ -20,7 +19,6 @@ Page({
     address: "点击选择地址",
     activityTitle: "请填写活动标题",
     num: "50"
-
   },
 
 
@@ -30,7 +28,7 @@ Page({
     wx.chooseLocation({
       success: function (res) {
         that.setData({
-          addressname: res.name,
+          name: res.name,
           address: res.address,
           lat: res.latitude,
           lon: res.longitude
@@ -39,7 +37,6 @@ Page({
     })
     console.log(this.data.lat)
     console.log(this.data.lon)
-    console.log(this.data.addressname)
   },
 
 
@@ -55,13 +52,10 @@ Page({
     })
   },
   inputDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      date: value,
       activityDate: e.detail.value
-    });
+    })
   },
-
   inputDetail: function (e) {
     this.setData({
       activityDetail: e.detail.value
@@ -81,19 +75,15 @@ Page({
   },
 
   inputStartDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      startdate: value,
       activityStartDate: e.detail.value
-    });
+    })
   },
 
   inputEndDate: function (e) {
-    let value = e.detail.value;
     this.setData({
-      enddate: value,
       activityEndDate: e.detail.value
-    });
+    })
   },
 
   bindPickerChange(e) {
@@ -125,11 +115,6 @@ Page({
       url: 'http://127.0.0.1:8080/xcx/addActivity',
       method: 'POST',
       data: {
-
-        ac_name: this.data.activityName, 
-        ac_loc: this.data.addressname,
-        ac_pdate: this.data.activityDate, 
-
         ac_name: this.data.activityName,
         ac_loc: this.data.activityAddress,
         ac_pdate: this.data.activityDate,
