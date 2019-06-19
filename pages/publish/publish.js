@@ -14,7 +14,6 @@ Page({
     activityCreatorName: "",
     activityPhonenumber: "",
     activityStartDate: "08:00",
-    inputEndDate: "",
     activityEndDate:"22:00",
     activityTypeList: ["团购拼单", "团体聚会", "信息登记", "自定义活动"],
     address: "点击选择地址",
