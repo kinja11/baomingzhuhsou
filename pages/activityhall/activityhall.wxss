@@ -44,9 +44,9 @@
 }
 .selectShow image
 {
-  width: 50rpx;
-  height: 50rpx;
-  padding-right: 20rpx;
+  width: 35rpx;
+  height: 35rpx;
+  padding-right: 10rpx;
 }
 .select-box{
   width: 97%;

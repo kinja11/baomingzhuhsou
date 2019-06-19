@@ -13,8 +13,8 @@
   </picker>
   <view class='row'>
     <label class='title'>活动日期</label>
-  <picker mode="date"  bindchange="inputDate">
-    <view>当前选择：{{date}}</view>
+  <picker mode="date"  bindchange="inputDate" style="windows">
+    <view>{{date}}</view>
   </picker>
 </view>
 
