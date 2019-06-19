@@ -92,8 +92,27 @@ Page({
       myuser: wx.getStorageSync("info"),
 
     });
+    /**获取活动名 */
+    this.setData({
+      activityName: wx.getStorageSync("activityName"),
+
+    });
+    console.log(this.data.activityName)
+
+    /**获取活动日期 */
+    this.setData({
+      activityDate: wx.getStorageSync("activityPublishDate"),
+
+    });
+    console.log(this.data.activityDate)
+ 
    
-   
+
+ 
+  
+
+
+
    
     var that = this;
     wx.request({
@@ -113,8 +132,8 @@ Page({
 
   
 
-  handleSubmit: function () {
-    //console.log(this.data.activityName + this.data.activityDate)
+  handleSubmit: function (e) {
+   
     wx.request({
       url: 'http://127.0.0.1:8080/xcx/addUserCollect',
       method: 'POST',
@@ -122,11 +141,13 @@ Page({
         nickname: this.data.myuser.nickName,
         ac_id: this.data.activityid,
         openid: this.data.openid,
-        
+        ac_name:this.data.activityName,
+        ac_pdate:this.data.activityDate
+
       },
       success: function (res) {
         var i = res.data;
-        console.log(i);
+        
         wx.showToast({
           title: '收藏成功！',
           duration: 3000

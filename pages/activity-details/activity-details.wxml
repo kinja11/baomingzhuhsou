@@ -36,7 +36,8 @@
   <navigator url='../join-activity-hall/join-activity-hall'>
     <i-button type="success" shape="circle" size="large"  bindtap='abde' open-type='getUserInfo' bindgetuserinfo='cdef'
     data-activityname="{{activity.ac_name}}" data-activitypublishdate="{{activity.ac_pdate}}" >确认报名</i-button></navigator>
-    <i-button  type="success" shape="circle" size="large" bindtap='handleSubmit'>收藏活动</i-button>
+
+    <i-button  type="success" shape="circle" size="large" bindtap='handleSubmit' >收藏活动</i-button>
  
 </view>
 

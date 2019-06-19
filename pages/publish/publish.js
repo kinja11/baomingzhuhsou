@@ -7,7 +7,7 @@ Page({
    // 插入活动数据
    lat:"",
    lon:"", 
-
+  addressname:"",
   activityName: "",
   activityAddress: "",
   activityDate: "",
@@ -29,7 +29,7 @@ Page({
     wx.chooseLocation({
       success: function (res) {
         that.setData({
-          name: res.name,
+          addressname: res.name,
           address: res.address,
           lat: res.latitude,
           lon: res.longitude
@@ -38,6 +38,7 @@ Page({
     })
     console.log(this.data.lat)
     console.log(this.data.lon)
+    console.log(this.data.addressname)
   },
  
   
@@ -126,7 +127,7 @@ Page({
       method: 'POST',
       data: {
         ac_name: this.data.activityName, 
-        ac_loc: this.data.activityAddress,
+        ac_loc: this.data.addressname,
         ac_pdate: this.data.activityDate, 
         ac_det: this.data.activityDetail,
         ac_cre: this.data.activityCreatorName,
