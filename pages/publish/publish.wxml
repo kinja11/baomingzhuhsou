@@ -1,27 +1,26 @@
-
-<view class="weui-cells__title">基本信息</view> 
+<view class="weui-cells__title">������Ϣ</view> 
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">活动类型</view>
+      <view class="weui-label">�����</view>
   </view>
   <view class="weui-cell__bd">
-        <input class="weui-input" confirm-type="next" disabled="ture" placeholder="活动聚会"/>
+        <input class="weui-input" confirm-type="next" disabled="ture" placeholder="��ۻ�"/>
   </view>
 </view>
 
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">活动标题</view>
+      <view class="weui-label">�����</view>
   </view>
   <view class="weui-cell__bd">
-        <input class="weui-input" confirm-type="next" bindinput="inputName" placeholder="请输入活动标题"/>
+        <input class="weui-input" confirm-type="next" bindinput="inputName" placeholder="����������"/>
   </view>
  </view>
 
  <view class="weui-cell weui-cell_input">
      <view class="weui-cell__hd">
-        <view class="weui-label">活动日期</view>
+        <view class="weui-label">�����</view>
       </view>
       <view class="weui-cell__bd">
           <picker mode="date" value="{{date}}" start="2019-06-01" end="2099-09-01" bindchange="inputDate">
@@ -31,11 +30,11 @@
       </view>
 </view>
 
-<view class="weui-cells__title">详细信息</view> 
+<view class="weui-cells__title">��ϸ��Ϣ</view> 
 <view class="weui-cells weui-cells_after-title">
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">活动地址</view>
+      <view class="weui-label">���ַ</view>
   </view>
   <view class="weui-cell__bd">
         <input class="weui-input" bindtap='chooseLocation' placeholder="{{address}}"/>
@@ -44,30 +43,30 @@
 
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">活动联系人</view>
+      <view class="weui-label">���ϵ��</view>
   </view>
   <view class="weui-cell__bd">
-        <input class="weui-input" confirm-type="next" bindinput='inputCreatorName' placeholder="请输入联系人姓名"/>
+        <input class="weui-input" confirm-type="next" bindinput='inputCreatorName' placeholder="��������ϵ������"/>
   </view>
 </view>
 
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">联系方式</view>
+      <view class="weui-label">��ϵ��ʽ</view>
   </view>
   <view class="weui-cell__bd">
-        <input class="weui-input" type="number" bindinput='inputCreatorPhone' maxlength="11" confirm-type="next" placeholder="请输入联系人手机号"/>
+        <input class="weui-input" type="number" bindinput='inputCreatorPhone' maxlength="11" confirm-type="next" placeholder="��������ϵ���ֻ���"/>
   </view>
  </view>
 </view>
 
-<view class="weui-cells__title">补充信息</view>
+<view class="weui-cells__title">������Ϣ</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" bindinput="inputDetail" placeholder="请输入活动详细信息（可选）" style="height: 3.3em" />
+                    <textarea class="weui-textarea" bindinput="inputDetail" placeholder="��������ϸ��Ϣ����ѡ��" style="height: 3.3em" />
                     <view class="weui-textarea-counter">0/200</view>
                 </view>
             </view>
         </view>
-<i-button type="success" shape="circle" size="small" bindtap="showTopTips" >发起活动</i-button>
+<i-buttontype="success" shape="circle" size="small" bindtap="showTopTips" >����</i-button>

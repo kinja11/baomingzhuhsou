@@ -3,24 +3,7 @@ Page({
 
 
   data: {
-<<<<<<< HEAD
-   // 插入活动数据
-   lat:"",
-   lon:"", 
-  addressname:"",
-  activityName: "",
-  activityAddress: "",
-  activityDate: "",
-  activityDetail: "",
-  activityCreatorName: "", 
-  activityPhonenumber: "",
-  activityStartDate: "",
-  activityEndDate: "",
-  activityTypeList: [ "团购拼单", "团体聚会", "信息登记", "自定义活动"],
-  address: "点击选择地址",
-  activityTitle: "请填写活动标题",
-  num: "50"
-=======
+
     // 插入活动数据
     lat: "",
     lon: "",
@@ -37,7 +20,7 @@ Page({
     address: "点击选择地址",
     activityTitle: "请填写活动标题",
     num: "50"
->>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
+
   },
 
 
@@ -142,15 +125,14 @@ Page({
       url: 'http://127.0.0.1:8080/xcx/addActivity',
       method: 'POST',
       data: {
-<<<<<<< HEAD
+
         ac_name: this.data.activityName, 
         ac_loc: this.data.addressname,
         ac_pdate: this.data.activityDate, 
-=======
+
         ac_name: this.data.activityName,
         ac_loc: this.data.activityAddress,
         ac_pdate: this.data.activityDate,
->>>>>>> 98d51f30859b1b010c890885e4468870c9daa293
         ac_det: this.data.activityDetail,
         ac_cre: this.data.activityCreatorName,
         ac_tel: this.data.activityPhonenumber,
