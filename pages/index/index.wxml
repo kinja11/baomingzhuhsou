@@ -8,9 +8,11 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">报名助手</text>
   </view>
 </view>
  <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="enterActivityHall">进入活动大厅</button>
+            <i-button type="primary" shape="circle" size="large" bindtap="enterActivityHall">进入活动大厅</i-button>
 </view>
+<i-load-more tip="" loading="{{ false }}" />
+<i-load-more tip="高原野、马舒晴、郝艺聪、陶鹤珍、宋立鸿" loading="{{ false }}" />
