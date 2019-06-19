@@ -1,0 +1,80 @@
+<view class="weui-cells__title">基本信息</view> 
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动类型</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" confirm-type="next" disabled="ture" placeholder="自定义活动"/>
+  </view>
+</view>
+ <view class="weui-cell weui-cell_input">
+     <view class="weui-cell__hd">
+        <view class="weui-label">活动日期</view>
+      </view>
+      <view class="weui-cell__bd">
+          <picker mode="date" value="{{activityDate}}" start="2019-06-01" end="2099-09-01" bindchange="inputDate">
+          <view class="weui-input">{{activityDate}}</view>
+          </picker>
+        </view>
+      </view>
+</view>
+<view class="weui-cells__title">详细信息</view> 
+<view class="weui-cells weui-cells_after-title">
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动地址</view>
+  </view>
+<view class="weui-cell__bd">
+        <input class="weui-input" bindtap='chooseLocation' placeholder="{{address}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">开始时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{activityStartDate}}" start="00:00" end="24:00" bindchange="inputStartDate">
+                        <view class="weui-input">{{activityStartDate}}</view>
+                    </picker>
+                </view>
+            </view>
+
+<view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">结束时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{activityEndDate}}" start="00:00" end="24:00" bindchange="inputEndDate">
+                        <view class="weui-input">{{activityEndDate}}</view>
+                    </picker>
+                </view>
+            </view>
+
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">活动联系人</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" confirm-type="next" bindinput='inputCreatorName' placeholder="请输入联系人姓名"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">联系方式</view>
+  </view>
+  <view class="weui-cell__bd">
+        <input class="weui-input" type="number" bindinput='inputCreatorPhone' maxlength="11" confirm-type="next" placeholder="请输入联系人手机号"/>
+  </view>
+ </view>
+</view>
+<view class="weui-cells__title">补充信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" bindinput="inputDetail" placeholder="请输入活动详细信息（可选）" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+<i-button type="success" shape="circle" size="small" bindtap="showTopTips" >发起活动</i-button>
