@@ -1,4 +1,3 @@
-
 <view class="weui-cells__title">基本信息</view> 
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
@@ -9,16 +8,6 @@
         <input class="weui-input" confirm-type="next" disabled="ture" placeholder="活动聚会"/>
   </view>
 </view>
-
-<view class="weui-cell weui-cell_input">
-    <view class="weui-cell__hd">
-      <view class="weui-label">活动标题</view>
-  </view>
-  <view class="weui-cell__bd">
-        <input class="weui-input" confirm-type="next" bindinput="inputName" placeholder="请输入活动标题"/>
-  </view>
- </view>
-
  <view class="weui-cell weui-cell_input">
      <view class="weui-cell__hd">
         <view class="weui-label">活动日期</view>
@@ -30,18 +19,16 @@
         </view>
       </view>
 </view>
-
 <view class="weui-cells__title">详细信息</view> 
 <view class="weui-cells weui-cells_after-title">
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
       <view class="weui-label">活动地址</view>
   </view>
-  <view class="weui-cell__bd">
+<view class="weui-cell__bd">
         <input class="weui-input" bindtap='chooseLocation' placeholder="{{address}}"/>
   </view>
 </view>
-
 <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
                     <view class="weui-label">开始时间</view>
@@ -72,7 +59,6 @@
         <input class="weui-input" confirm-type="next" bindinput='inputCreatorName' placeholder="请输入联系人姓名"/>
   </view>
 </view>
-
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
       <view class="weui-label">联系方式</view>
@@ -82,7 +68,6 @@
   </view>
  </view>
 </view>
-
 <view class="weui-cells__title">补充信息</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
