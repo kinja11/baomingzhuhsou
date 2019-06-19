@@ -24,8 +24,8 @@
         <view class="weui-label">活动日期</view>
       </view>
       <view class="weui-cell__bd">
-          <picker mode="date" value="{{date}}" start="2019-06-01" end="2099-09-01" bindchange="inputDate">
-          <view class="weui-input">{{date}}</view>
+          <picker mode="date" value="{{activityDate}}" start="2019-06-01" end="2099-09-01" bindchange="inputDate">
+          <view class="weui-input">{{activityDate}}</view>
           </picker>
         </view>
       </view>
@@ -41,6 +41,28 @@
         <input class="weui-input" bindtap='chooseLocation' placeholder="{{address}}"/>
   </view>
 </view>
+
+<view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">开始时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{activityStartDate}}" start="00:00" end="24:00" bindchange="inputStartDate">
+                        <view class="weui-input">{{activityStartDate}}</view>
+                    </picker>
+                </view>
+            </view>
+
+<view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">开始时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{inputEndDate}}" start="00:00" end="24:00" bindchange="inputEndDate">
+                        <view class="weui-input">{{inputEndDate}}</view>
+                    </picker>
+                </view>
+            </view>
 
 <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
