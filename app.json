@@ -12,6 +12,7 @@
     "pages/collection-detail/collection-detail",
     "pages/join-collection/join-collection",
     "pages/publishHistory/publishHistory",
+    "pages/publish-hall/publish-hall",
     "pages/publish-detail/publish-detail",
     "pages/publish-settings/publish-settings",
     "pages/about/about",
@@ -41,7 +42,7 @@
         "text": "活动大厅"
       },
       {
-        "pagePath": "pages/publish/publish",
+        "pagePath": "pages/publish-hall/publish-hall",
         "iconPath": "resources/tabbar/icon2c.png",
         "selectedIconPath": "resources/tabbar/icon2.png",
         "text": "创建活动"
