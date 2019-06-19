@@ -1,4 +1,9 @@
 <view>
+  <view class='row'>
+    <label class='title'>活动类型</label>
+    <view class='info'>活动聚会</view>
+  </view>
+
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{activityTypeList}}">
   <view class='row'>
     <label class='title'>活动类型</label>
@@ -10,6 +15,20 @@
     <label class='title'>活动日期</label>
   <picker mode="date"  bindchange="inputDate">
     <view>当前选择：{{date}}</view>
+  </picker>
+</view>
+
+     <view class='row'>
+    <label class='title'>开始时间</label>
+  <picker mode="time"  bindchange="inputStartDate">
+    <view>当前选择：{{startdate}}</view>
+  </picker>
+</view>
+
+     <view class='row'>
+    <label class='title'>结束时间</label>
+  <picker mode="time"  bindchange="inputEndDate">
+    <view>当前选择：{{enddate}}</view>
   </picker>
 </view>
 
@@ -38,24 +57,7 @@
 
     <view class='row'>
     <label class='title'>联系方式</label>
-    <view class='info'><input class="in" bindinput='inputCreatorPhone' placeholder='请输入联系方式'/></view></view>
-
-     <view class='row'>
-    <label class='title'>开始日期</label>
-  <picker mode="date"  bindchange="inputStartDate">
-    <view>当前选择：{{startdate}}</view>
-  </picker>
-</view>
-
-     <view class='row'>
-    <label class='title'>结束日期</label>
-  <picker mode="date"  bindchange="inputEndDate">
-    <view>当前选择：{{enddate}}</view>
-  </picker>
-</view>
-
-
-  
+    <view class='info'><input class="in" bindinput='inputCreatorPhone' type="number" placeholder='请输入联系方式'/></view></view>  
 
    <i-button type="success" shape="circle" size="large" bindtap="showTopTips">创建活动</i-button>
 
